@@ -10,14 +10,14 @@ const AddProduct = () => {
     
     const saveProduct = async(e) => {
         e.preventDefault();
-        const product = (title, price);
-        await fetch('http://localhost:8080/products',{
+        const product = {title, price};
+        await fetch(`http://localhost:8080/products`, {
             method: "POST",
             body: JSON.stringify(product),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type' : 'application/json'
             }
-        })
+        });
        navigate("/");
     } 
     
