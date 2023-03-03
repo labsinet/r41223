@@ -33,7 +33,7 @@ const EditProduct = () => {
                 'Content-Type' : 'application/json'
             }
         });
-       navigate("/");
+       navigate("/"); 
     }
 
     return (
@@ -55,7 +55,7 @@ const EditProduct = () => {
         
                 <div className="field">
                 <div className="control">
-                    <button className="button is-primary">Update</button>
+                    <button className="button is-primary">Update Product</button>
                 </div>
                 </div>
             </form>    
