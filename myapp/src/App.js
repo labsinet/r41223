@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/shared/Header/Header';
+import { Routes, Route } from "react-router-dom";
 import ProductList from './components/ProductList/ProductList';
+import Home from './components/Home/Home';
+import AboutUs from './components/AboutUs/AboutUs';
 import './App.css';
+import AddProduct from './components/AddProduct/AddProduct';
 
 function App() {
+
 
   const [products, setProducts] = useState([
     {id: 1, title: 'Product 1', price: 899},
@@ -18,12 +23,26 @@ function App() {
       setProducts(newProducts);
     }
 
+ 
+
 
   return (
     <div className="App">
      <Header/> 
-      <ProductList products={products } deleteProduct={ deleteProduct } />
+    
+    <Routes>
+      <Route path="/" element={<Home/>}></Route> 
+      <Route path='/shop' element={<ProductList products={products } deleteProduct={ deleteProduct } />}></Route>
+      <Route path="/" element={<AboutUs/>}></Route> 
+      <Route path="/add" element={<AddProduct/>}></Route> 
+    </Routes>
+   
 
+
+
+      
+
+      
 
     </div>
   );
