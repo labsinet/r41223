@@ -16,7 +16,7 @@ const EditProduct = () => {
     }, []);
 
     const getProductById = async() => {
-        const response = await fetch(`http://localhost:8080/products/${id}`);
+        const response = await fetch(`http://localhost:5000/products/${id}`);
         const data = await response.json();
         setTitle(data.title);
         setPrice(data.price);

@@ -6,7 +6,7 @@ import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/AboutUs';
 import './App.css';
 import AddProduct from './components/AddProduct/AddProduct';
-import EditProduct from '/components/EditProduct/EditProduct';
+import EditProduct from './components/EditProduct/EditProduct';
 
 
 function App() {
